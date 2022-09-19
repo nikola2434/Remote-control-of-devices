@@ -1,0 +1,95 @@
+$dach_back_color: #edf4ff;
+$dach_color: #0b4f81;
+$width: 230px;
+$pading-left: 10px;
+$radius: 35px;
+.dachboad {
+  margin-top: 45px;
+  width: $width;
+  background-color: $dach_back_color;
+  height: 100vh;
+  position: fixed;
+  padding-left: $pading-left;
+  padding-top: 15px;
+  box-sizing: border-box;
+  display: flexbox;
+  z-index: 50;
+  border-right: 2px solid $dach_color;
+
+  &:last-child {
+    align-items: center;
+  }
+
+  .name_menu {
+    color: $dach_color;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+  }
+  .container_items_menu {
+    display: block;
+    max-width: 200px;
+    margin-top: 10px;
+  }
+  .name_device {
+    width: 100%;
+    color: #0b4f81;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+
+    &:hover {
+      border-left: #0b4f81 3px solid;
+      transition: all 0.2s ease-out;
+    }
+  }
+  .name_kind_device {
+    color: #174566;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+  }
+  .kind_name_device {
+    margin-bottom: 5px;
+  }
+  .arrow {
+    position: absolute; 
+    font-size: 30px;
+    cursor: pointer;
+    width: $radius;
+    height: $radius;
+    margin-top: 50vh;
+    bottom: 50%;
+
+    margin: 0 auto;
+    margin-left: $width - $pading-left - $radius/2;
+    border-radius: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $dach_color;
+    color: $dach_color;
+    background-color: #ffff;
+  }
+  > button {
+    cursor: pointer;
+    font-style: italic;
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
+    opacity: 0.8;
+    color: #174566;
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      display: block;
+      background-color: #174566;
+    }
+    &:hover {
+      opacity: 1;
+      transition: 0.1s linear;
+    }
+  }
+}

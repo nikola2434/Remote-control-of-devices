@@ -1,0 +1,26 @@
+.panel_control {
+  width: 98%;
+  margin: 10px;
+  &::after {
+    content: "";
+    width: 160px;
+    background-color: #0b4f81;
+    height: 1px;
+    opacity: 0.8;
+    display: block;
+  }
+  .name_panel_control {
+    color: #174566;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .container_control{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 170px;
+  }
+}

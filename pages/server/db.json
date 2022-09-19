@@ -1,0 +1,91 @@
+{
+  "allActiveDevices": [
+    {
+      "name": "Осциллографы",
+      "items": [
+        { "id": 1, "nameDevice": "Rigol DS1102D" },
+        { "id": 2, "nameDevice": "Hantek DSO5062BMV" },
+        { "id": 3, "nameDevice": "Rohde&Schwarz RTO1014" },
+        { "id": 4, "nameDevice": "Rohde&Schwarz RTM1052" }
+      ]
+    },
+    {
+      "name": "Анализаторы спектра",
+      "items": [
+        { "id": 5, "nameDevice": "АКИП-4201" },
+        { "id": 6, "nameDevice": "LIG Nex1 LSA-265" },
+        { "id": 7, "nameDevice": "СК4-БЕЛАН 400" }
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "img": "/images/3.jpeg",
+      "name": "Rigol DS1102D",
+      "device_control": []
+    },
+    {
+      "id": 2,
+      "img": "/images/3.jpeg",
+      "name": "Hantek DSO5062BMV",
+      "device_control": []
+    },
+    {
+      "id": 3,
+      "img": "/pages/images/3.jpeg",
+      "name": "Rohde&Schwarz RTO1014",
+      "device_control": []
+    },
+    {
+      "id": 4,
+      "img": "/images/3.jpeg",
+      "name": "Rohde&Schwarz RTM1052",
+      "device_control": []
+    },
+    {
+      "id": 5,
+      "img": "/images/4.jpeg",
+      "name": "АКИП-4201",
+      "device_control": []
+    },
+    {
+      "id": 6,
+      "img": "/images/4.jpeg",
+      "name": "LIG Nex1 LSA-265",
+      "device_control": []
+    },
+    {
+      "id": 7,
+      "img": "/images/4.jpeg",
+      "name": "СК4-БЕЛАН 400",
+      "device_control": [
+        {
+          "nameBlock": "Данные",
+          "elenents": [
+            { "typePanel": "input" },
+            { "typePanel": "button", "nameInput": "Ввод" },
+            { "typePanel": "button", "nameInput": "Сброс" }
+          ]
+        },
+        {
+          "nameBlock": "Управление",
+          "elenents": [
+            { "typePanel": "button", "nameInput": "Част." },
+            { "typePanel": "button", "nameInput": "Обзор" },
+            { "typePanel": "button", "nameInput": "Ампл." }
+          ]
+        },
+        {
+          "nameBlock": "Маркер",
+          "elenents": [
+            { "typePanel": "button", "nameInput": "Мрк" },
+            { "typePanel": "button", "nameInput": "Поиск" },
+            { "typePanel": "button", "nameInput": "Настр" },
+            { "typePanel": "button", "nameInput": "Удал." }
+          ]
+        }
+      ]
+    }
+  ]
+}

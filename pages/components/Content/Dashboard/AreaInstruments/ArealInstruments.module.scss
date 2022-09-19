@@ -1,0 +1,85 @@
+.area {
+  padding-top: 45px;
+  padding-left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container_device {
+  position: absolute;
+  margin: 15px;
+  border: 2px solid #0b4f81;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #d2d4d7;
+  &:focus {
+    border: 2px solid #0b4f81;
+    border-radius: 0px;
+    z-index: 4;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    .container_control_button {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      button {
+        height: 20px;
+        width: 35px;
+        outline: none; /* Для синий ободки */
+        border: 0;
+        background: transparent;
+        font-size: 40px;
+        font-weight: 700;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: #0b4f81;
+        transition: color 0.2s linear;
+        cursor: pointer;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .name {
+    color: black;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    margin-top: 5px;
+    margin-left: 5px;
+    > div {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+  }
+  .container_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    .loading{
+        margin-top: 16vh;
+    }
+  }
+  .reorder {
+    cursor: grab;
+    width: 35px;
+    height: 20px;
+
+    & * {
+      fill: #0b4f81;
+    }
+
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "nirs_next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "server": "json-server -w pages/server/db.json -p 3001"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/lab": "^5.0.0-alpha.91",
+    "@mui/material": "^5.9.1",
+    "@reduxjs/toolkit": "^1.8.3",
+    "axios": "^0.27.2",
+    "framer-motion": "^6.5.1",
+    "json-server": "^0.17.0",
+    "next": "12.2.2",
+    "nextjs-progressbar": "^0.0.14",
+    "re-resizable": "^6.9.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.33.1",
+    "react-icons": "^4.4.0",
+    "react-loading": "^2.0.3",
+    "react-loading-skeleton": "^3.1.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "redux-thunk": "^2.4.1",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.6",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.2",
+    "typescript": "4.7.4"
+  }
+}
