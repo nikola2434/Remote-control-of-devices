@@ -1,0 +1,51 @@
+.modal {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  .button_close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    position: absolute;
+    top: 0;
+    font-size: 50px;
+    color: #0b4f81;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+
+    & :hover {
+      color: white;
+      transition: color 0.2s linear;
+    }
+  }
+  .device {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    .img {
+      width: 85%;
+      height: 100%;
+      align-items: center;
+      margin-left: 20px;
+      .image {
+        width: 100%;
+      }
+    }
+    .controlM {
+      display: inline-block;
+      justify-content: center;
+      padding: 20px;
+    }
+  }
+}
