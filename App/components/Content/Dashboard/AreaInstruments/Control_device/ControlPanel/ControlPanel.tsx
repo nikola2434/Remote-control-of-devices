@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { IDeviceControl } from "../../../../../../../App/types/types";
-import { MyButton } from "../../../../../MyButton/MyButton";
+import { MyButton } from "../../../../../Elements/MyButton/MyButton";
 import { MyInput } from "../../../../../MyInput/MyInput";
 import style from "./ControlPanel.module.scss";
 

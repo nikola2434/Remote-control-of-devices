@@ -2,9 +2,10 @@ import { FC } from "react";
 import style from "./login.module.scss";
 import lock from "../../../public/images/locked.png";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Checkbox, FormControlLabel, TextField } from "@mui/material";
+import { Checkbox, FormControlLabel } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
+import Field from "../Elements/Field/Field";
 
 export const Auth: FC = (props) => {
   const {
@@ -32,12 +33,9 @@ export const Auth: FC = (props) => {
         <div className={style.name}>Войти</div>
         <form onSubmit={handleSubmit(submitData)} className={style.form}>
           <div className={style.container_input}>
-            <TextField
-              className={style.input}
-              label="Адрес электронной почты"
-              variant="outlined"
-              error={!!errors.login?.message}
-              helperText={errors.login?.message}
+            <Field
+              placeholder="Адрес электронной почты"
+              errors={errors.login}
               {...register("login", {
                 required: "Это поле должно быть заполнено",
                 minLength: {
@@ -52,12 +50,11 @@ export const Auth: FC = (props) => {
             />
           </div>
           <div className={style.container_input}>
-            <TextField
-              className={style.input}
-              label="Пароль"
+            <Field
+              placeholder="Пароль"
+              variant="outlined"
               type="password"
-              error={!!errors.password?.message}
-              helperText={errors.password?.message}
+              errors={errors.password}
               {...register("password", {
                 required: "Это поле должно быть заполнено",
               })}

@@ -17,31 +17,11 @@
     width: 100%;
     text-align: center;
   }
-  .step {
-    font-size: 20px;
-    font-weight: 500;
-    color: #0b4f81;
-    margin-bottom: 20px;
+
+  .field {
+    width: 100%;
+    margin-top: 20px;
   }
-
-
-    .container_input {
-      display: block;
-      width: 100%;
-    }
-    .name_step {
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-    .input {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .error {
-      margin-left: 10px;
-      position: absolute;
-    }
 
   .container_button {
     margin-top: 50px;

@@ -1,26 +1,21 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import style from "./authorization.module.scss";
-import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import { Password } from "./Password/Password";
-import { Email } from "./email/Email";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { AuthField } from "./AuthField/AuthField";
+import { MyButton } from "../../Elements/MyButton/MyButton";
 
-interface INewUser {
+export interface INewUser {
   email: string;
-  password1: string;
+  password: string;
+  repeatPassword: string;
 }
 
 export const Authorization: FC = () => {
-  const [step, setStep] = useState(0);
-  const methods = useForm<INewUser>({ mode: "onBlur" });
-  const { handleSubmit, reset } = methods;
+  const { register, handleSubmit, formState, watch, reset } = useForm<INewUser>(
+    { mode: "onChange" }
+  );
 
-  function handleNext(): void {
-    setStep(1);
-  }
-  function handleBack(): void {
-    setStep(0);
-  }
   const onSubmit: SubmitHandler<INewUser> = (data) => {
     alert(JSON.stringify(data));
     reset();
@@ -33,25 +28,11 @@ export const Authorization: FC = () => {
         animate={{ x: "35vw" }}
       >
         <div className={style.name}>Регистрация</div>
-        <div className={style.step}> Шаг: {step}</div>
 
-        <FormProvider {...methods}>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            {step === 0 ? <Email step={step} /> : <Password step={step} />}
-            <div className={style.container_button}>
-              <button onClick={handleBack} disabled={step === 0} type="button">
-                Назад
-              </button>
-              {step === 0 ? (
-                <button onClick={handleNext} type="button">
-                  Далее
-                </button>
-              ) : (
-                <button type="submit">Зарегистрироваться</button>
-              )}
-            </div>
-          </form>
-        </FormProvider>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <AuthField formState={formState} register={register} watch={watch} />
+          <MyButton typeButton="1"> Зарегистрироваться</MyButton>
+        </form>
       </motion.div>
     </motion.div>
   );
