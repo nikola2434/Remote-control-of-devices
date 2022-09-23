@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "json-server -w pages/server/db.json -p 3001"
+    "server": "json-server -w App/server/db.json -p 3001"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",

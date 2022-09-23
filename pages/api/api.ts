@@ -1,6 +1,6 @@
-import { IActiveDevices } from "./../types/types";
+import { IActiveDevices } from "../../App/types/types";
 import axios from "axios";
-import { IDevice } from "./../types/types";
+import { IDevice } from "../../App/types/types";
 
 const api = axios.create({
   baseURL: "http://localhost:3001/",
